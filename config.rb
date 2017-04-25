@@ -29,7 +29,7 @@ activate :blog do |blog|
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
-  # blog.summary_separator = /(READMORE)/
+  blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
@@ -47,7 +47,7 @@ end
 
 activate :livereload
 activate :directory_indexes
-activate :syntax, :line_numbers => false
+# activate :syntax, :line_numbers => false
 
 # Methods defined in the helpers block are available in templates
 helpers do
@@ -66,9 +66,9 @@ end
 
 set :css_dir, 'stylesheets'
 
-set :js_dir, 'javascripts'
+# set :js_dir, 'javascripts'
 
-set :images_dir, 'images'
+# set :images_dir, 'images'
 
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change

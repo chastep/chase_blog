@@ -1,40 +1,40 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+    <%= stylesheet_link_tag "normalize", "skeleton", "site" %>
+    <%= javascript_include_tag "site" %>
   </head>
   <body>
-
-    <div id="main" role="main">
-      <%= yield %>
+    <div id="home">
+      <div class="header">
+        <ul class="navigation" role="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts">Posts</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <% if current_article.nil? %>
+          <h1><%= current_page.url.gsub('/', '').gsub('-', ' ').capitalize %></h1>
+        <% else %>
+          <h1><%= current_article.title %></h1>
+          <div class="meta">
+            <% if current_article.tags.length > 1 %>
+              <p><%= current_article.date.strftime('%B %e, %Y') %> | <%= formatted_article_tags(current_article.tags) %></p>
+            <% else %>
+              <p><%= current_article.date.strftime('%e %B %Y') %></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="content">
+        <%= yield %>
+      </div>
     </div>
-
-    <aside>
-      <h2>Recent Articles</h2>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-        <% end %>
-      </ol>
-
-      <h2>Tags</h2>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-        <% end %>
-      </ol>
-
-      <h2>By Year</h2>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-        <% end %>
-      </ol>
-    </aside>
   </body>
 </html>
