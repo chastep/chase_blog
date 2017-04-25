@@ -13,3 +13,8 @@ gem "middleman-syntax"
 gem "builder", "~> 3.0"
 gem "nokogiri"
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+
+# *****************************************************************
+# RAKEFILE/HEROKU CONFIG
+# *****************************************************************
+gem 'rack-contrib'
