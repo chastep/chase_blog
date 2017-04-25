@@ -1,22 +1,100 @@
+@charset "utf-8";
+
+$font: 'Dosis', sans-serif;
+
+$regular: 200;
+$bold: 600;
+$heavy: 700;
+
+$gray: #161616;
+$highlight: #350055;
+$bluish: #CED4F4;
+
+// ************************************************************************** //
+// GLOBAL STYLES                                                              //
+// ************************************************************************** //
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;  text-align: center;
+  color: $gray;
+  background-color: $bluish;
+  padding: 3% 0;
+  font-family: $font;
+  font-weight: $regular;
+  font-size: 1.75rem;
 }
 
 a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
+  border-bottom: 1px dotted lighten($gray, 60%);
+  text-decoration: none;
+  color: $gray;
   &:hover {
-    color: rgba(#000, 0.6);
+    color: $highlight;
+  }
+  &.highlight {
+    color: $highlight;
+    border-bottom: 0px;
+    &:hover {
+      color: $gray;
+    }
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+pre, code {
+  font-family: "Droid Sans Mono", "Source Code Pro", monospace;
+}
+
+pre.highlight {
+  padding: 10px 20px;
+  font-size: 0.7em;
+  line-height: 1.6em;
+  width: 1000px;
+  margin-left: -80px;
+}
+
+.code {
+  line-height: initial;
+}
+
+.intro {
+  margin-top: 3rem;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: center;
+  .badges {
+    font-size: 0.5em;
+    text-align: center;
+    a {
+      margin-right: 40px;
+      &:last-of-type {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.header, .content {
+  margin: 0 auto;
+  max-width: 840px;
+  padding: 0px 3%;
+}
+
+.meta {
+  font-size: 0.75em;
+  color: lighten($gray, 55%)
+}
+
+ul.navigation {
+  font-size: 1.4em;
+  border-bottom: 1px dotted black;
+  li {
+    display: inline;
+    padding: 5px;
+    a {
+      color: black;
+      border-bottom: 0px;
+    }
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
 }
