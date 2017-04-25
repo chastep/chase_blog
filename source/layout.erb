@@ -7,7 +7,7 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>chase stephens<%= ' - ' + current_article.title unless current_article.nil? %></title>
-    <%= stylesheet_link_tag "all" %>
+    <%= stylesheet_link_tag "normalize", "skeleton", "all" %>
     <%= javascript_include_tag "site" %>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type='text/css'>
   </head>
