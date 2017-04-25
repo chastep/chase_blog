@@ -16,7 +16,7 @@ layout: home
   </div>
 
   <div class="latest">
-    <h2>Blog  Posts</h2>
+    <h2>Blog Posts</h2>
     <% most_recent(blog.articles, "blog", 5).each do |article| %>
       <div class="article">
         <h3><%= link_to article.title, article %></h3>
