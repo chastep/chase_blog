@@ -24,7 +24,7 @@ activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
-  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.permalink = "{year}/{title}.html"
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
@@ -36,14 +36,39 @@ activate :blog do |blog|
   # blog.day_link = "{year}/{month}/{day}.html"
   # blog.default_extension = ".markdown"
 
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  # blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
 
   # Enable pagination
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
 end
+
+activate :livereload
+activate :directory_indexes
+activate :syntax, :line_numbers => false
+
+# Methods defined in the helpers block are available in templates
+helpers do
+  def most_recent(articles, tag, number=nil)
+    number = number || articles.length + 1;
+    blog = articles.select do |article|
+      article.tags.include?(tag)
+    end
+    blog[0..(number-1)]
+  end
+
+  def formatted_article_tags(tags)
+    tags.reject { |t| t == 'blog' }.join(", ")
+  end
+end
+
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
 
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
