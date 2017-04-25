@@ -97,8 +97,6 @@ GEM
     parallel (1.11.1)
     public_suffix (2.0.5)
     rack (2.0.1)
-    rack-contrib (1.2.0)
-      rack (>= 0.9.1)
     rack-livereload (0.3.16)
       rack
     rb-fsevent (0.9.8)
@@ -126,7 +124,6 @@ DEPENDENCIES
   middleman-livereload
   middleman-syntax
   nokogiri
-  rack-contrib
   redcarpet (~> 3.3, >= 3.3.3)
 
 BUNDLED WITH
