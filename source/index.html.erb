@@ -2,21 +2,33 @@
 layout: home
 ---
 
-
-
-<div class="latest">
-  <h2>
-    Writing
-  </h2>
-  <% most_recent(blog.articles, "blog", 5).each do |article| %>
-    <div class="article">
-      <p>
-        <%= article.date.strftime('%B %d, %Y') %>
-      </p>
-      <h3>
-        <%= link_to article.title, article %>
-      </h3>
-      <%= article.summary %>
+<div class="content">
+  <div class="intro">
+    <p>
+      <strong>Hello!</strong>
+      I'm Chase Stephens. Professional Tall Person!
+    </p>
+    <div class="badges">
+      <a href="https://www.linkedin.com/in/chase-stephens/" target="#"> LinkedIn</a>
+      <a href="https://github.com/chastep" target="#"></i> Github</a>
+      <a href=""></i> Email</a>
     </div>
-  <% end %> 
+  </div>
+
+  <div class="latest">
+    <h2>
+      Posts
+    </h2>
+    <% most_recent(blog.articles, "blog", 5).each do |article| %>
+      <div class="article">
+        <p>
+          <%= article.date.strftime('%B %d, %Y') %>
+        </p>
+        <h3>
+          <%= link_to article.title, article %>
+        </h3>
+        <%= article.summary %>
+      </div>
+    <% end %> 
+  </div>
 </div>
