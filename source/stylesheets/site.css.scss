@@ -56,7 +56,9 @@ pre.highlight {
 }
 
 .intro {
-  margin-top: 3rem;
+  background-color: #FDFFFF;
+  border: 1px dotted gray;
+  margin: 3rem 0 3rem;
   font-size: 2em;
   line-height: 1.5em;
   text-align: center;
@@ -79,8 +81,8 @@ pre.highlight {
 }
 
 .meta {
-  font-size: 0.75em;
-  color: lighten($gray, 55%)
+  font-size: 0.90em;
+  color: #C14D28
 }
 
 ul.navigation {
