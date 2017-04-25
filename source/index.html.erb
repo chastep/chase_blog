@@ -1,12 +1,24 @@
 ---
 layout: home
 ---
+<div id="intro">
+  <h2><strong>Hello!</strong> I'm Chase Stephens, Professional Tall Guy.</h2>
+  <div class="badges">
+    <a href="https://www.linkedin.com/in/chase-stephens/" target="#"><i class="fa fa-twitter fa-lg"></i> LinkedIn</a>
+    <a href="https://github.com/chastep" target="#"><i class="fa fa-github fa-lg"></i> Github</a>
+    <a href="mailto:me@liz.codes"><i class="fa fa-envelope fa-lg"></i> Email</a>
+  </div>
+</div>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
+<div class="latest">
+  <h3>Posts</h3>
+  <% most_recent(blog.articles, "blog", 5).each do |article| %>
+    <div class="article">
+      <h4><%= link_to article.title, article %></h4>
+      <p><%= article.date.strftime('%B %d, %Y') %></p>
+      <p><%= article.summary %></p>
+    </div>
+  <% end %> 
+</div>
 
 
