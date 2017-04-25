@@ -83,13 +83,5 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
-
-  # so github can find our assets when building
-  activate :relative_assets
 end
 
-activate :deploy do |deploy|
-  deploy.deploy_method = :git
-  deploy.branch = 'gh-pages'
-  deploy.build_before = true
-end

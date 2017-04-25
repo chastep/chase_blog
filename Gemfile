@@ -7,10 +7,6 @@ gem "middleman", "~> 4.1"
 gem "middleman-blog"
 gem "middleman-livereload"
 gem "middleman-syntax"
-# ********************************************
-# Deployment of middleman to github
-# ********************************************
-gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
