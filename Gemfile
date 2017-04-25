@@ -8,8 +8,14 @@ gem "middleman-blog"
 gem "middleman-livereload"
 gem "middleman-syntax"
 
-
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 gem "nokogiri"
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+
+# ********************************************
+# Styling
+# ********************************************
+gem 'bitters'
+gem 'bourbon'
+gem 'neat'
