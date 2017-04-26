@@ -8,6 +8,7 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>chase stephens</title>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <%= stylesheet_link_tag "normalize", "skeleton", "site" %>
     <%= javascript_include_tag "site" %>
   </head>
@@ -21,7 +22,7 @@
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
-      <div class="article-container">
+      <div class="content">
         <% if current_article.nil? %>
           <h1><%= current_page.url.gsub('/', '').gsub('-', ' ').capitalize %></h1>
         <% else %>

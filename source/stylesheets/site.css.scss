@@ -9,6 +9,7 @@ $heavy: 700;
 $gray: #161616;
 $highlight: #FF5630;
 $bluish: #CED4F4;
+$grayred: #FCE3DA;
 
 // ********************************************************************* //
 // GLOBAL STYLES                                                         //
@@ -16,7 +17,7 @@ $bluish: #CED4F4;
 
 body {
   color: $gray;
-  background-color: $bluish;
+  background-color: #FDFFFF;
   padding: 3% 0;
   font-family: $font;
   font-weight: $regular;
@@ -56,9 +57,8 @@ pre.highlight {
 }
 
 .intro {
-  background-color: #FDFFFF;
+  background-color: $bluish;
   border: 1px dotted gray;
-  margin: 3rem 0 3rem;
   font-size: 2em;
   line-height: 1.5em;
   text-align: center;
@@ -83,7 +83,7 @@ pre.highlight {
 
 .header, .content, .article-container {
   margin: 0 auto;
-  max-width: 840px;
+  max-width: 800px;
   padding: 0px 3%;
 }
 
