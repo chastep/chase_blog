@@ -8,11 +8,12 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>chase stephens</title>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <%= stylesheet_link_tag "normalize", "skeleton", "site" %>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <div id="home">
+    <div id="content">
       <div class="header">
         <ul class="navigation" role="menu">
           <li><a href="/">Home</a></li>
@@ -20,6 +21,8 @@
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
+      </div>
+      <div class="content">
         <% if current_article.nil? %>
           <h1><%= current_page.url.gsub('/', '').gsub('-', ' ').capitalize %></h1>
         <% else %>
@@ -32,8 +35,6 @@
             <% end %>
           </div>
         <% end %>
-      </div>
-      <div class="content">
         <%= yield %>
       </div>
     </div>
