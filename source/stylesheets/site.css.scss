@@ -10,9 +10,9 @@ $gray: #161616;
 $highlight: #FF5630;
 $bluish: #CED4F4;
 
-// ************************************************************************** //
-// GLOBAL STYLES                                                              //
-// ************************************************************************** //
+// ********************************************************************* //
+// GLOBAL STYLES                                                         //
+// ********************************************************************* //
 
 body {
   color: $gray;
@@ -74,7 +74,14 @@ pre.highlight {
   }
 }
 
-.header, .content {
+.article {
+  border-left: 2px solid black;
+  margin: 0 auto;
+  max-width: 840px;
+  padding: 0px 3%;
+}
+
+.header, .content, .article-container {
   margin: 0 auto;
   max-width: 840px;
   padding: 0px 3%;
