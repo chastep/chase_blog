@@ -6,3 +6,7 @@ tags: blog, test
 
 Helllllllooooo Middleman!
 
+This was a test of Middleman functionality.
+
+yadda yadda yadda extra text
+

@@ -7,7 +7,7 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>chase stephens</title>
-    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <%= stylesheet_link_tag "normalize", "skeleton", "site" %>
     <%= javascript_include_tag "site" %>
@@ -23,19 +23,19 @@
         </ul>
       </div>
       <div class="content">
-        <% if current_article.nil? %>
-          <h1><%= current_page.url.gsub('/', '').gsub('-', ' ').capitalize %></h1>
-        <% else %>
-          <h1><%= current_article.title %></h1>
-          <div class="meta">
-            <% if current_article.tags.length > 1 %>
-              <p><%= current_article.date.strftime('%B %e, %Y') %> | <%= formatted_article_tags(current_article.tags) %></p>
-            <% else %>
-              <p><%= current_article.date.strftime('%e %B %Y') %></p>
-            <% end %>
-          </div>
-        <% end %>
-        <%= yield %>
+      <% if current_article.nil? %>
+        <h2><%= current_page.url.gsub('/', '').gsub('-', ' ').capitalize %></h2>
+      <% else %>
+        <h2><%= current_article.title %></h2>
+        <div class="meta">
+          <% if current_article.tags.length > 1 %>
+            <p><%= current_article.date.strftime('%B %e, %Y') %> | <%= formatted_article_tags(current_article.tags) %></p>
+          <% else %>
+            <p><%= current_article.date.strftime('%e %B %Y') %></p>
+          <% end %>
+        </div>
+      <% end %>
+      <%= yield %>
       </div>
     </div>
   </body>
