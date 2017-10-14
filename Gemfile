@@ -13,3 +13,5 @@ gem 'middleman-s3_sync'
 gem "builder", "~> 3.0"
 gem "nokogiri"
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+
+gem 'mime-types'
