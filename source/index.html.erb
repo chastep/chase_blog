@@ -4,7 +4,7 @@ layout: home
 
 <div class="content">
   <div class="intro">
-    <span>Chase Stephens - Diaries of a Tall Guy</span>
+    <span>Chase Stephens - Tall Guy Diaries</span>
     <div class="badges">
       <a href="https://www.linkedin.com/in/chase-stephens/" target="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
       <a href="https://github.com/chastep" target="#"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
@@ -13,12 +13,12 @@ layout: home
   </div>
 
   <div class="latest">
-    <h2>Blog Posts</h2>
+    <h2>Posts</h2>
     <% most_recent(blog.articles, "blog", 5).each do |article| %>
       <div class="article">
-        <h3><%= link_to article.title, article %></h3>
+        <h4><%= link_to article.title, article %></h4>
         <p><%= article.date.strftime('%B %d, %Y') %></p>
-        <%= article.summary %>
+        <%= article.summary(25, '...') %>
       </div>
     <% end %> 
   </div>
