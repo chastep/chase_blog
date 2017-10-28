@@ -4,16 +4,22 @@ layout: home
 
 <div class="content">
   <div class="intro">
-    <span>Chase Stephens - Tall Guy Diaries</span>
+    <span>Tall Tales</span>
     <div class="badges">
       <a href="https://www.linkedin.com/in/chase-stephens/" target="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
       <a href="https://github.com/chastep" target="#"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
       <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a>
     </div>
   </div>
-
+  <div index="index-header">
+    <ul class="index-navigation" role="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
   <div class="latest">
-    <h2>Posts</h2>
     <% most_recent(blog.articles, "blog", 5).each do |article| %>
       <div class="article">
         <h4><%= link_to article.title, article %></h4>
