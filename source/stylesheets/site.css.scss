@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-$font: 'Dosis', sans-serif;
+$font: 'Bitter', light;
+$title-font : 'Open Sans', sans-serif;
 
 $regular: 200;
 $bold: 600;
@@ -18,10 +19,17 @@ $grayred: #FCE3DA;
 body {
   color: $gray;
   background-color: #FDFFFF;
-  padding: 3% 0;
+  margin: 3% 0;
   font-family: $font;
   font-weight: $regular;
   font-size: 1.75rem;
+  font-color: #454258;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: $title-font !important;
+  font-style: italic;
+  font-weight: lighter;
 }
 
 a {
@@ -93,6 +101,23 @@ pre.highlight {
   padding: 0px 3%;
 }
 
+ul.index-navigation {
+  font-size: 1.4em;
+  border-bottom: 1px dotted black;
+  margin-bottom: 4%;
+  li {
+    display: inline;
+    padding: 5px;
+    a {
+      color: black;
+      border-bottom: 0px;
+    }
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}
+
 .meta {
   font-size: 0.90em;
   color: #C14D28
@@ -111,5 +136,13 @@ ul.navigation {
     &:last-of-type {
       margin-right: 0px;
     }
+    a:hover {
+      background-color: $bluish;
+    }
   }
+}
+
+.about p {
+  font-size: .95em;
+  margin-bottom: 10px
 }
