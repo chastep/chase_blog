@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-$font: 'Dosis', sans-serif;
+$font: 'Bitter', light;
+$title-font : 'Open Sans', sans-serif;
 
 $regular: 200;
 $bold: 600;
@@ -22,6 +23,13 @@ body {
   font-family: $font;
   font-weight: $regular;
   font-size: 1.75rem;
+  font-color: #454258;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: $title-font !important;
+  font-style: italic;
+  font-weight: lighter;
 }
 
 a {
@@ -127,6 +135,9 @@ ul.navigation {
     }
     &:last-of-type {
       margin-right: 0px;
+    }
+    a:hover {
+      background-color: $bluish;
     }
   }
 }
