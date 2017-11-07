@@ -16,4 +16,4 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 gem 'mime-types'
 
-gem 'middleman-gemoji'
+# gem 'middleman-gemoji'

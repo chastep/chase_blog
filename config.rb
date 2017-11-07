@@ -111,4 +111,5 @@ activate :s3_sync do |s3_sync|
 end
 
 # activate gemoji gem cause im a basic bitch :information_desk_person:
-activate :gemoji, :size => 25
+# weird error, delete my content div
+# activate :gemoji, :size => 25

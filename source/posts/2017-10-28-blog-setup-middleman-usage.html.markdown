@@ -28,6 +28,7 @@ So, here is a rough list of resources I found helpful in building the app from t
 * [Google Fonts](https://fonts.google.com/?selection.family=Dosis) => A must to find a baus font. Still get lost in trying new ones out.
 * [Middleman Setup Quick Tutorial](https://webdesign.tutsplus.com/articles/project-build-a-complete-website-with-middleman--cms-25429) => Didn't follow this word for word, but damn was it insightful and informative!
 * [Jekyll](https://jekyllrb.com/) => Great comparison of another static site/blog app.
-* [Middleman S3_Sync](https://github.com/fredjean/middleman-s3_sync) => This is a really cool gem that I use to automatically deploy my changes! A quick `bundle exec middleman build` followed by a `middleman s3_sync` gets my weird mind online in a flash! :metal:
+* [Middleman S3_Sync](https://github.com/fredjean/middleman-s3_sync) => This is a really cool gem that I use to automatically deploy my changes! A quick `bundle exec middleman build` followed by a `middleman s3_sync` gets my weird mind online in a flash!
+
 
 
