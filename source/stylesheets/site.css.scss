@@ -85,7 +85,6 @@ pre.highlight {
 
 .article {
   border-left: 2px solid black;
-  margin: 0 auto;
   max-width: 840px;
   padding: 0px 3%;
   font-size: .75em;
@@ -97,7 +96,7 @@ pre.highlight {
 
 .header, .content, .article-container {
   margin: 0 auto;
-  max-width: 800px;
+  width: 75% !important;
   padding: 0px 3%;
 }
 
@@ -120,6 +119,7 @@ ul.index-navigation {
 
 .meta {
   font-size: 0.90em;
+  margin-bottom: 3rem;
   color: #C14D28
 }
 
