@@ -109,3 +109,6 @@ activate :s3_sync do |s3_sync|
   s3_sync.index_document             = 'index.html'
   s3_sync.error_document             = '404/index.html'
 end
+
+# activate gemoji gem cause im a basic bitch :information_desk_person:
+activate :gemoji, :size => 25
