@@ -9,21 +9,36 @@ $heavy: 700;
 
 $gray: #161616;
 $highlight: #FF5630;
-$bluish: #CED4F4;
+$maroon5: #5C1B1B;
+$bluish: #CED4F4; 
+$oceanblue: #00004d;
 $grayred: #FCE3DA;
+
 
 // ********************************************************************* //
 // GLOBAL STYLES                                                         //
 // ********************************************************************* //
 
+pre.highlight {
+  padding: 10px 20px;
+  font-size: 0.7em;
+  line-height: 1.6em;
+  width: 1000px;
+  margin-left: -80px;
+}
+
+.code {
+  line-height: initial;
+}
+
 body {
   color: $gray;
   background-color: #FDFFFF;
-  margin: 3% 0;
   font-family: $font;
   font-weight: $regular;
   font-size: 1.75rem;
   font-color: #454258;
+  margin: 3% 0;
 }
 
 h2, h3, h4, h5, h6 {
@@ -46,22 +61,6 @@ a {
       color: $gray;
     }
   }
-}
-
-pre, code {
-  font-family: "Droid Sans Mono", "Source Code Pro", monospace;
-}
-
-pre.highlight {
-  padding: 10px 20px;
-  font-size: 0.7em;
-  line-height: 1.6em;
-  width: 1000px;
-  margin-left: -80px;
-}
-
-.code {
-  line-height: initial;
 }
 
 .intro {
@@ -120,7 +119,7 @@ ul.index-navigation {
 .meta {
   font-size: 0.90em;
   margin-bottom: 3rem;
-  color: #C14D28
+  color: $highlight;
 }
 
 ul.navigation {
@@ -129,6 +128,7 @@ ul.navigation {
   li {
     display: inline;
     padding: 5px;
+    position: relative;
     a {
       color: black;
       border-bottom: 0px;
@@ -137,7 +137,7 @@ ul.navigation {
       margin-right: 0px;
     }
     a:hover {
-      background-color: $bluish;
+      color: $maroon5;
     }
   }
 }
@@ -145,4 +145,10 @@ ul.navigation {
 .about p {
   font-size: .95em;
   margin-bottom: 10px
+}
+
+#ocean {
+  display: block;
+  margin: auto;
+  width: 90%;
 }
