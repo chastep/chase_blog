@@ -2,30 +2,17 @@
 layout: home
 ---
 
+
 <div class="content">
-  <div class="intro">
-    <h1>Tall Tales</h1>
-    <div class="badges">
-      <a href="https://www.linkedin.com/in/chase-stephens/" target="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/chastep" target="#"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
-      <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a>
+  <br>
+  <%= image_tag 'water.jpg', :id => "ocean", :title => "https://www.reddit.com/r/itookapicture/comments/6f0yno/itap_of_dark_ocean_texture/" %>
+  <br>
+  <h3>Recent Posts</h3>
+  <% most_recent(blog.articles, "blog", 5).each do |article| %>
+    <div class="article">
+      <h4><%= link_to article.title, article %></h4>
+      <p><%= article.date.strftime('%B %d, %Y') %></p>
+      <%= article.summary(25, '...') %>
     </div>
-  </div>
-  <div index="index-header">
-    <ul class="index-navigation" role="menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/posts">Posts</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="latest">
-    <% most_recent(blog.articles, "blog", 5).each do |article| %>
-      <div class="article">
-        <h4><%= link_to article.title, article %></h4>
-        <p><%= article.date.strftime('%B %d, %Y') %></p>
-        <%= article.summary(25, '...') %>
-      </div>
-    <% end %> 
-  </div>
+  <% end %> 
 </div>
